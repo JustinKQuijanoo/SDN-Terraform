@@ -37,3 +37,5 @@ terraform.rc
 # *.github 
 # *.github/workflows 
 *.github/workflows/github_actions.yml
+
+.terraform.lock.hcl
