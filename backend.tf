@@ -4,7 +4,7 @@ terraform {
     organization = "Hydrohomie-training"
 
     workspaces {
-      name = "SDN-Lab3-Terraform-Project"
+      name = "SDN-Lab3-Terraform"
     }
 
   }
