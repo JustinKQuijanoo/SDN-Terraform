@@ -241,7 +241,7 @@ tee -a /var/www/html/index.html << END
 
     <main>
       
-        <img src="./images/hydrohomie.png" alt="" srcset="">
+        <img src="https://cdn-images-1.medium.com/max/1200/1*r3hv6k1lH5RtKhP3wfnydg.png" alt="picture of hydrohomie" srcset="">
       
     </main>
 
