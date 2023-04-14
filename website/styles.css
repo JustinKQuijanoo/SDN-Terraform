@@ -25,8 +25,6 @@ body {
   button {
     font-family: sans-serif;
   }
-
-  
   
   /*
 
@@ -79,4 +77,15 @@ body {
     background-color: #0066CC;
     color: #FFFFFF;
   }
+
+.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p {
+  text-align: center;
+}
   

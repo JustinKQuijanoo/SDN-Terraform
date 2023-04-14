@@ -102,6 +102,17 @@ tee -a /var/www/html/index.html << END
     background-color: #0066CC;
     color: #FFFFFF;
   }
+
+  .photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+  p {
+    text-align: center;
+  }
     </style>
   </head>
   <body>
@@ -122,7 +133,7 @@ tee -a /var/www/html/index.html << END
 
     <main>
       
-        <img src="./images/hydrohomie.png" alt="" srcset="">
+        <img src="https://cdn-images-1.medium.com/max/1200/1*r3hv6k1lH5RtKhP3wfnydg.png" alt="picture of hydrohomie" class="photo">
       
     </main>
 
