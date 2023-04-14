@@ -15,6 +15,16 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
+variable "instance_count" {
+  description = "Number of EC2 instances"
+  default = "2"
+}
+
+variable "key_file" {
+  description = "Key file name"
+  default = "KeyS144"
+}
+
 variable "private_subnet_id" {
   description = "ID for private subnet"
   type        = string
