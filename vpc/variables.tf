@@ -20,14 +20,14 @@ variable "cidr_block" {
   type        = string
 }
 
-variable "public_subnet" {
-  description = "IPv4 block for public subnet"
-  type        = string
+variable "subnet_cidrs" {
+  description = "Address space for subnets"
+  type        = list(any)
 }
 
-variable "private_subnet" {
-  description = "IPv4 block for private subnet"
-  type        = string
+variable "counter" {
+  type    = number
+  default = 2
 }
 
 variable "default_route" {
