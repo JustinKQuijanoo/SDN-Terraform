@@ -17,15 +17,16 @@ resource "aws_launch_configuration" "Cluster-Hydrohomie" {
 
 # Create autoscaling group
 resource "aws_autoscaling_group" "ASG-Hydrohomie" {
+  count                = var.min_size
   launch_configuration = aws_launch_configuration.Cluster-Hydrohomie.name
   vpc_zone_identifier  = data.aws_subnets.VPC-Hydrohomie.ids
   target_group_arns    = [aws_lb_target_group.TG-Hydrohomie.arn]
   health_check_type    = "ELB"
-  min_size             = 2
-  max_size             = 4
+  min_size             = var.min_size
+  max_size             = var.max_size
   tag {
     key                 = "Name"
-    value               = "ASG-Hydrohomie"
+    value               = "WS-Hydrohomie-${count.index + 1}"
     propagate_at_launch = true
   }
 }
