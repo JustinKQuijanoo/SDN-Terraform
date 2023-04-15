@@ -1,21 +1,6 @@
-variable "ami" {
-  description = "AMI for launch configuration"
-  type        = string
-}
-
-variable "instance_type" {
-  description = "EC2 instance type"
-  type        = string
-}
-
-variable "private_subnet_id" {
-  description = "ID for private subnet"
-  type        = string
-}
-
-variable "public_subnet_id" {
-  description = "ID for public subnet"
-  type        = string
+variable "subnet_ids" {
+  description = "IDs for subnets"
+  type        = list(any)
 }
 
 variable "vpc_id" {
@@ -26,4 +11,14 @@ variable "vpc_id" {
 variable "security_group_id" {
   description = "ID for security group"
   type        = string
+}
+
+variable "ami" {
+  description = "AMI image"
+  default     = "ami-0aa7d40eeae50c9a9"
+}
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  default     = "t2.micro"
 }
