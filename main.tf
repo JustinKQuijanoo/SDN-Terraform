@@ -27,3 +27,7 @@ module "load-balancer" {
   subnet_ids        = module.vpc.subnet_ids
   security_group_id = module.security-group.security_group_id
 }
+
+output "alb_dns_name" {
+  value = module.load-balancer.alb_dns_name
+}
