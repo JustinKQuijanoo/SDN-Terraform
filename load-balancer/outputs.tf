@@ -10,6 +10,10 @@ data "aws_vpc" "VPC-Hydrohomie" {
   id = var.vpc_id
 }
 
+data "aws_subnet_ids" "VPC-Hydrohomie" {
+  vpc_id = data.aws_vpc.VPC-Hydrohomie.id
+}
+
 output "alb_dns_name" {
   description = "DNS name of load balancer"
   value = aws_lb.LB-Hydrohomie.dns_name
