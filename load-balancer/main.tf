@@ -9,7 +9,7 @@ resource "aws_launch_configuration" "Cluster-Hydrohomie" {
   image_id        = var.ami
   instance_type   = var.instance_type
   security_groups = [var.security_group_id]
-  user_data       = file("./ec2-instances/user-data.sh")
+  user_data       = file("./user-data.sh")
   lifecycle {
     create_before_destroy = true
   }
