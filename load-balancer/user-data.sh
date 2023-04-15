@@ -16,7 +16,7 @@ tee -a /var/www/html/index.html << END
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Stay Hydrated</title>
+    <title>Hydrohomies</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,7 +118,7 @@ tee -a /var/www/html/index.html << END
   <body>
     <header class="header">
         <div class="header-container">
-          <a href="#" class="logo">Stay Hydrated</a>
+          <a href="#" class="logo">Hydrohomies</a>
           <nav class="nav">
             <ul>
               <li><a href="#">Home</a></li>
@@ -138,7 +138,7 @@ tee -a /var/www/html/index.html << END
     </main>
 
     <footer>
-      <p>&copy; 2023 Stay Hydrated</p>
+      <p>&copy; 2023 Hydrohomies</p>
       <p>Hello from Justin Quijano at $(hostname -f)</p>
     </footer>
   </body>
