@@ -25,11 +25,11 @@ resource "aws_security_group" "SG-Hydrohomie" {
   }
 
   ingress {
-    description     = "Allow HTTP from Security group"
-    from_port       = 80
-    to_port         = 80
-    protocol        = "TCP"
-    security_groups = [aws_security_group.SG-Hydrohomie.id]
+    description = "Allow HTTP from Security group"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "TCP"
+    self        = true
   }
 
   egress {
