@@ -139,6 +139,7 @@ tee -a /var/www/html/index.html << END
 
     <footer>
       <p>&copy; 2023 Stay Hydrated</p>
+      <p>Hello from Justin Quijano at $(hostname -f)</p>
     </footer>
   </body>
 </html>

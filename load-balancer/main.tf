@@ -4,6 +4,32 @@
 # Lab 3 - Terraform
 ###
 
+# Create launching configuration
+resource "aws_launch_configuration" "Cluster-Hydrohomie" {
+  image_id        = var.ami
+  instance_type   = var.instance_type
+  security_groups = [var.security_group_id.id]
+  user_data       = file("./ec2-instances/user-data.sh")
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+# Create autoscaling group
+resource "aws_autoscaling_group" "ASG-Hydrohomie" {
+  launch_configuration = aws_launch_configuration.Cluster-Hydrohomie.name
+  vpc_zone_identifier  = var.vpc_id
+  target_group_arns    = [aws_lb_target_group.TG-Hydrohomie.arn]
+  health_check_type    = "ELB"
+  min_size             = 2
+  max_size             = 4
+  tag {
+    key                 = "Name"
+    value               = "ASG-Hydrohomie"
+    propagate_at_launch = true
+  }
+}
+
 # Create load balancer
 resource "aws_lb" "LB-Hydrohomie" {
   name               = "LB-Hydrohomie"

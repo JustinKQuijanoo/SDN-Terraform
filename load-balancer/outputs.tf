@@ -10,16 +10,9 @@ data "aws_vpc" "VPC-Hydrohomie" {
   id = var.vpc_id
 }
 
-# data "aws_subnets" "SN-Hydrohomie" {
-#   filter {
-#     name   = "vpc-id"
-#     values = [var.vpc_id]
-#   }
-# }
-
-# data "aws_subnet" "SN-Hydrohomie" {
-#   for_each = toset(data.aws_subnets.example.ids)
-#   id       = each.value
-# }
+output "alb_dns_name" {
+  description = "DNS name of load balancer"
+  value = aws_lb.LB-Hydrohomie.dns_name
+}
 
 

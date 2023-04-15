@@ -23,6 +23,8 @@ module "security-group" {
 # Module for load balancers
 module "load-balancer" {
   source            = "./load-balancer"
+  ami               = module.ec2-instances.ami
+  instance_type     = module.ec2-instances.instance_type
   vpc_id            = module.vpc.vpc_id
   public_subnet_id  = module.vpc.public_subnet_id
   private_subnet_id = module.vpc.private_subnet_id
