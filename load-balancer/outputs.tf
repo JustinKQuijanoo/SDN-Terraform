@@ -11,7 +11,10 @@ data "aws_vpc" "VPC-Hydrohomie" {
 }
 
 data "aws_subnets" "VPC-Hydrohomie" {
-  vpc_id = data.aws_vpc.VPC-Hydrohomie.id
+  filter {
+    name   = "vpc-id"
+    values = [var.vpc_id]
+  }
 }
 
 output "alb_dns_name" {

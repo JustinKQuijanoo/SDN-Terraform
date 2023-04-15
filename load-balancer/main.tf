@@ -18,7 +18,7 @@ resource "aws_launch_configuration" "Cluster-Hydrohomie" {
 # Create autoscaling group
 resource "aws_autoscaling_group" "ASG-Hydrohomie" {
   launch_configuration = aws_launch_configuration.Cluster-Hydrohomie.name
-  vpc_zone_identifier  = data.aws_subnet_ids.VPC-Hydrohomie.ids
+  vpc_zone_identifier  = data.aws_subnets.VPC-Hydrohomie.ids
   target_group_arns    = [aws_lb_target_group.TG-Hydrohomie.arn]
   health_check_type    = "ELB"
   min_size             = 2
