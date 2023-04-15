@@ -29,5 +29,5 @@ module "load-balancer" {
 }
 
 output "alb_dns_name" {
-  value = module.load-balancer.alb_dns_name
+  value = "http://${module.load-balancer.alb_dns_name}"
 }
