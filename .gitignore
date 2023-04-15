@@ -40,5 +40,5 @@ terraform.rc
 
 .terraform.lock.hcl
 
-./website/index.html
-./website/styles.css
+*./website/index.html
+*./website/styles.css
