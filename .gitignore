@@ -39,3 +39,6 @@ terraform.rc
 *.github/workflows/github_actions.yml
 
 .terraform.lock.hcl
+
+./website/index.html
+./website/styles.css
