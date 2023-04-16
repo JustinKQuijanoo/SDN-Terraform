@@ -5,7 +5,7 @@
 ###
 
 output "subnet_ids" {
-  value = aws_subnet.SN-Pub-Hydrohomie[*].id
+  value = aws_subnet.SN-Hydrohomie[*].id
 }
 
 # Output for VPC ID to be used for security-group module in the root main.tf
