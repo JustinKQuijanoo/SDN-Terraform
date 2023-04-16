@@ -20,12 +20,12 @@ variable "ami" {
 
 variable "min_size" {
   description = "Minimum value for EC2 cluster"
-  default     = 2
+  default     = 3
 }
 
 variable "max_size" {
   description = "Maximum value for EC2 cluster"
-  default     = 4
+  default     = 6
 }
 variable "instance_type" {
   description = "EC2 instance type"
