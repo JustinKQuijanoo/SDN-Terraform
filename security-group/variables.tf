@@ -1,7 +1,7 @@
 ###
 # Author: Justin Quijano
-# Class: SYST35144 Cloud Systems
-# Lab 3 - Terraform
+# Class: TELE36058 Software Defined Networks
+# Lab 3 - Terraform Project
 ###
 
 # variable to be used for security group resource

@@ -2,7 +2,7 @@
 ###
 # Author: Justin Quijano
 # Class: TELE36058 Software Defined Networks
-# Lab 3 - Terraform
+# Lab 3 - Terraform Project
 ###
 
 # install apache webserver  

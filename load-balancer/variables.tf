@@ -1,3 +1,9 @@
+###
+# Author: Justin Quijano
+# Class: TELE36058 Software Defined Networks
+# Lab 3 - Terraform Project
+###
+
 variable "subnet_ids" {
   description = "IDs for subnets"
   type        = list(any)
